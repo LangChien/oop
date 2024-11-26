@@ -17,6 +17,33 @@ public class Cart {
     }
   }
 
+  // Overloading by diCering types of parameters
+  public void addDigitalVideoDisc(DigitalVideoDisc[] discs) {
+    for (int i = 0; i < discs.length; i++) {
+      if (qtyOrdered < MAX_NUMBERS_ORDERED) {
+        itemsOrdered[qtyOrdered] = discs[i];
+        qtyOrdered++;
+        System.out.println("The disc has been added.");
+      } else {
+        System.out.println("The cart is almost full.");
+        return;
+      }
+    }
+  }
+
+  // Overloading by diCering numbers of parameters
+  public void addDigitalVideoDisc(DigitalVideoDisc disc1, DigitalVideoDisc disc2) {
+    if (qtyOrdered < MAX_NUMBERS_ORDERED - 1) {
+      itemsOrdered[qtyOrdered] = disc1;
+      qtyOrdered++;
+      itemsOrdered[qtyOrdered] = disc2;
+      qtyOrdered++;
+      System.out.println("The discs have been added.");
+    } else {
+      System.out.println("The cart is almost full.");
+    }
+  }
+
   public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
     if (qtyOrdered > 0) {
       for (int i = 0; i < qtyOrdered; i++) {
