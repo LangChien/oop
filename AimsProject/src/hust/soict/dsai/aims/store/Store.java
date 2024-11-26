@@ -30,4 +30,12 @@ public class Store {
     }
     System.out.println("The disc is not in the store.");
   }
+
+  public void showStore() {
+    for (int i = 0; i < 100; i++) {
+      if (itemsInStore[i] != null) {
+        System.out.println(itemsInStore[i].getTitle());
+      }
+    }
+  }
 }
