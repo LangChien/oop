@@ -1,4 +1,5 @@
 package hust.soict.dsai.test.store;
+
 import hust.soict.dsai.aims.disc.DigitalVideoDisc;
 import hust.soict.dsai.aims.store.Store;
 
@@ -15,9 +16,10 @@ public class TestStore {
     store.addDigitalVideoDisc(dvd1);
     store.addDigitalVideoDisc(dvd2);
     store.addDigitalVideoDisc(dvd3);
-
+    store.showStore();
     // remove from store
     store.removeDigitalVideoDisc(dvd1);
+    store.showStore();
 
   }
 }
