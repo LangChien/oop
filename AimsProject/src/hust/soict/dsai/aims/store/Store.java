@@ -1,40 +1,36 @@
 package hust.soict.dsai.aims.store;
 
-import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+import java.util.ArrayList;
+import java.util.List;
+
+import hust.soict.dsai.aims.media.Media;
 
 public class Store {
 
-  private DigitalVideoDisc itemsInStore[] = new DigitalVideoDisc[100];
+  private List<Media> medias = new ArrayList<Media>();
 
-  public void addDigitalVideoDisc(DigitalVideoDisc disc) {
-    for (int i = 0; i < 100; i++) {
-      if (itemsInStore[i] == null) {
-        itemsInStore[i] = disc;
-        System.out.println("The disc has been added.");
-        return;
-      }
+  public void addMedia(Media media) {
+    if (medias.contains(media))
+      System.out.println("Store is already in the list");
+    else {
+      medias.add(media);
+      System.out.println("Media is added");
     }
-    System.out.println("The store is full.");
   }
 
-  public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
-    for (int i = 0; i < 100; i++) {
-      if (itemsInStore[i] == disc) {
-        for (int j = i; j < 99; j++) {
-          itemsInStore[j] = itemsInStore[j + 1];
-        }
-        itemsInStore[99] = null;
-        System.out.println("The disc has been removed.");
-        return;
-      }
+  public void removeMedia(Media media) {
+    if (!this.medias.contains(media))
+      System.out.println("Store is not already in the list");
+    else {
+      this.medias.remove(media);
+      System.out.println("Media is deleted");
     }
-    System.out.println("The disc is not in the store.");
   }
 
   public void showStore() {
-    for (int i = 0; i < 100; i++) {
-      if (itemsInStore[i] != null) {
-        System.out.println(itemsInStore[i].getTitle());
+    for (Media media : medias) {
+      if (media.getTitle() != null) {
+        System.out.println(media.getTitle());
       }
     }
   }

@@ -11,6 +11,7 @@ public class ConcatenationInLoops {
         for (int i = 0; i < n; i++) {
             str += "a";
         }
+        System.out.println(str);
         endTime = System.currentTimeMillis();
         System.out.println("Time using + operator: " + (endTime - startTime) + " ms");
 
