@@ -1,11 +1,13 @@
 package hust.soict.dsai.test.disc;
 
-import hust.soict.dsai.aims.disc.DigitalVideoDisc;
+import hust.soict.dsai.aims.media.DigitalVideoDisc;
 
 public class TestPassingParameter {
     public static void main(String[] args) {
-        DigitalVideoDisc jungleDVD = new DigitalVideoDisc("Jungle");
-        DigitalVideoDisc cinderellaDVD = new DigitalVideoDisc("Cinderella");
+        DigitalVideoDisc jungleDVD = new DigitalVideoDisc("The Lion King", "Animation", 19.95f, 87, "Roger Allers");
+
+        DigitalVideoDisc cinderellaDVD = new DigitalVideoDisc("Star Wars", "Science Fiction", 24.95f, 124,
+                "George Lucas");
 
         System.out.println("Before swap:");
         System.out.println("jungleDVD title: " + jungleDVD.getTitle());
