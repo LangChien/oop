@@ -19,8 +19,6 @@ public class TestPassingParameter {
         System.out.println("jungleDVD title: " + jungleDVD.getTitle());
         System.out.println("cinderellaDVD title: " + cinderellaDVD.getTitle());
 
-        changeTitle(jungleDVD, cinderellaDVD.getTitle());
-
         System.out.println("After changeTitle:");
         System.out.println("jungleDVD title: " + jungleDVD.getTitle());
         System.out.println("cinderellaDVD title: " + cinderellaDVD.getTitle());
@@ -32,7 +30,4 @@ public class TestPassingParameter {
         o2 = tmp;
     }
 
-    public static void changeTitle(DigitalVideoDisc disc, String title) {
-        disc.setTitle(title);
-    }
 }
