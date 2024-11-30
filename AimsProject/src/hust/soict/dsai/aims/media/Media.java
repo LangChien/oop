@@ -33,4 +33,14 @@ public class Media {
         return cost;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null)
+            return false;
+        else if (obj instanceof Media) {
+            Media media = (Media) obj;
+            return this.title == media.title;
+        } else
+            return false;
+    }
 }
