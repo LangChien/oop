@@ -43,4 +43,18 @@ public class Media {
         } else
             return false;
     }
+
+    // sort by title => cost
+    public int compareTo(Media media) {
+        if (this.title.compareTo(media.title) == 0) {
+            if (this.cost < media.cost)
+                return -1;
+            else if (this.cost > media.cost)
+                return 1;
+            else
+                return 0;
+        } else
+            return this.title.compareTo(media.title);
+    }
+
 }

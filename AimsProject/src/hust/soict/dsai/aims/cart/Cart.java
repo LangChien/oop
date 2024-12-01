@@ -52,4 +52,8 @@ public class Cart {
     }
     System.out.println("The disc is not in the cart.");
   }
+
+  public void sort() {
+    medias.sort((a, b) -> a.compareTo(b));
+  }
 }

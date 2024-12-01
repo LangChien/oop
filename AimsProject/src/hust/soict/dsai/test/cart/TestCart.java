@@ -25,5 +25,9 @@ public class TestCart {
     cart.search("title...");
     // found
     cart.search("The Lion King");
+    // test sort cart
+    cart.sort();
+    cart.print();
   }
+
 }
